@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="485.0" prefWidth="698.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ma.enset.examenjdbcfx.presentation.controller.ConsultationController">
+   <children>
+      <Label layoutX="29.0" layoutY="35.0" text="Date de consultation" />
+      <Label layoutX="268.0" layoutY="35.0" text="IdMedecin" />
+      <Label layoutX="424.0" layoutY="35.0" text="IdPatient" />
+      <DatePicker fx:id="dateTextField" layoutX="157.0" layoutY="31.0" prefHeight="25.0" prefWidth="100.0" />
+      <Button layoutX="207.0" layoutY="69.0" mnemonicParsing="false" onAction="#ajouterConsultation" prefHeight="25.0" prefWidth="72.0" text="Ajouter" />
+      <Button layoutX="296.0" layoutY="69.0" mnemonicParsing="false" onAction="#supprimerConsultation" text="Supprimer" />
+      <TableView fx:id="consultationTableView" layoutX="84.0" layoutY="110.0" prefHeight="200.0" prefWidth="450.0">
+        <columns>
+          <TableColumn fx:id="idConsultationColonne" prefWidth="106.0" text="IdConsultation" />
+          <TableColumn fx:id="dateDeConsultationColonne" prefWidth="147.0" text="Date de Consultation" />
+            <TableColumn fx:id="IdPatientColonne" prefWidth="97.0" text="IdPatient" />
+            <TableColumn fx:id="idMedecinColonne" prefWidth="99.0" text="IdMedecin" />
+        </columns>
+      </TableView>
+      <TextField fx:id="idMedecinTextfield" layoutX="332.0" layoutY="31.0" prefHeight="25.0" prefWidth="63.0" />
+      <TextField fx:id="idPatientTextfield" layoutX="484.0" layoutY="31.0" prefHeight="25.0" prefWidth="63.0" />
+   </children>
+</AnchorPane>
