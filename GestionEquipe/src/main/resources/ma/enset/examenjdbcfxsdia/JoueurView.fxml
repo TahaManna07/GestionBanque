@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="436.0" prefWidth="694.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ma.enset.examenjdbcfxsdia.presentation.controller.JoueurController">
+   <children>
+      <Label layoutX="71.0" layoutY="25.0" text="Nom" />
+      <Label layoutX="71.0" layoutY="60.0" text="Position" />
+      <Label layoutX="71.0" layoutY="92.0" text="Numero" />
+      <Label layoutX="71.0" layoutY="123.0" text="Equipe ID" />
+      <TextField fx:id="textFieldNom" layoutX="129.0" layoutY="21.0" />
+      <TextField fx:id="textFieldPosition" layoutX="129.0" layoutY="56.0" />
+      <TextField fx:id="textFieldNumero" layoutX="129.0" layoutY="88.0" />
+      <TextField fx:id="textFieldEquipeID" layoutX="129.0" layoutY="119.0" />
+      <Button layoutX="320.0" layoutY="44.0" mnemonicParsing="false" onAction="#ajouterJoueur" text="Ajouter" />
+      <Button layoutX="312.0" layoutY="97.0" mnemonicParsing="false" onAction="#supprimerJoueur" text="Supprimer" />
+      <TableView fx:id="tableView" layoutX="76.0" layoutY="175.0" prefHeight="127.0" prefWidth="386.0">
+        <columns>
+          <TableColumn fx:id="colonneID" prefWidth="75.0" text="Id" />
+          <TableColumn fx:id="colonneNom" prefWidth="82.0" text="Nom" />
+            <TableColumn fx:id="colonnePosition" prefWidth="75.0" text="Position" />
+            <TableColumn fx:id="colonneNumero" prefWidth="75.0" text="Numero" />
+            <TableColumn fx:id="colonneEquipeID" prefWidth="75.0" text="EquipeID" />
+        </columns>
+      </TableView>
+      <TextField fx:id="textFieldFichierImprimer" layoutX="78.0" layoutY="338.0" prefHeight="25.0" prefWidth="72.0" />
+      <Button fx:id="Imprimer" layoutX="194.0" layoutY="338.0" mnemonicParsing="false" onAction="#printJoueurInfoToPDFButton" text="Imprimer" />
+      <Button fx:id="confirmerModification" layoutX="393.0" layoutY="140.0" mnemonicParsing="false" onAction="#cofirmerModofication" text="Confirme" />
+      <Button fx:id="modifier" layoutX="321.0" layoutY="140.0" mnemonicParsing="false" onAction="#modifier" text="Modifier" />
+   </children>
+</AnchorPane>

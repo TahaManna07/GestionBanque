@@ -1,0 +1,5 @@
+Informations du joueur :
+ID : 1
+Nom : John Doe
+Position : Attaquant
+Numéro : 10
